@@ -2,9 +2,9 @@
 # Copy into EC2 Launch Template after replacing the three settings below.
 set -euo pipefail
 export DEBIAN_FRONTEND=noninteractive
-REGION='ap-southeast-1'
-REPO_URL='https://github.com/REPLACE_OWNER/so-thu-chi-aws.git'
-COMMIT_SHA='REPLACE_WITH_FULL_40_CHARACTER_COMMIT_SHA'
+REGION='us-east-1'
+REPO_URL='https://github.com/htkietvn/so-thu-chi-aws.git'
+COMMIT_SHA='e4f7964ac20d2713b29220872b42d3a3bf1f4321'
 PARAMETER='/lab/so-thu-chi/database'
 APP='/var/www/so-thu-chi'
 [[ "$COMMIT_SHA" =~ ^[0-9a-f]{40}$ ]] || { echo 'Set an exact Git commit SHA'; exit 1; }
